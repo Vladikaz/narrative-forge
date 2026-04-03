@@ -322,6 +322,9 @@ const Index = () => {
                 <button onClick={() => objectInputRef.current?.click()} className="p-2 text-primary hover:bg-foreground/10 rounded-full" title="Add Layer Object">
                   <ImageIcon size={20} />
                 </button>
+                <button onClick={() => audioInputRef.current?.click()} className="p-2 text-yellow-400 hover:bg-foreground/10 rounded-full" title="Add Audio">
+                  <Music size={20} />
+                </button>
                 <button onClick={() => setShowEffectMenu(!showEffectMenu)} className="p-2 text-accent hover:bg-foreground/10 rounded-full" title="Atmosphere">
                   <Wand2 size={20} />
                 </button>
