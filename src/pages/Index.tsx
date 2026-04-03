@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
   ImagePlus, Play, Pause, Plus, Map as MapIcon,
-  X, MousePointerClick, MonitorPlay,
+  X, MousePointerClick, MonitorPlay, Music,
   Edit3, Image as ImageIcon, Wand2, Video, FolderOpen,
   ChevronRight,
 } from 'lucide-react';
