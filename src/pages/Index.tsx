@@ -128,6 +128,13 @@ const Index = () => {
     <div className="relative w-full h-screen bg-background text-foreground overflow-hidden font-sans select-none">
       <input type="file" accept="image/*,video/*" ref={mediaInputRef} onChange={handleMediaUpload} className="hidden" />
       <input type="file" accept="image/png,image/webp" ref={objectInputRef} onChange={handleObjectUpload} className="hidden" />
+      <input type="file" accept="audio/*" ref={audioInputRef} onChange={(e) => {
+        const file = e.target.files?.[0];
+        if (file && activeSceneId) {
+          const url = URL.createObjectURL(file);
+          setScenes(prev => prev.map(s => s.id === activeSceneId ? { ...s, audioUrl: url, audioName: file.name } : s));
+        }
+      }} className="hidden" />
       <input type="file" accept=".json" ref={importInputRef} onChange={importProject} className="hidden" />
       <audio ref={audioRef} loop />
 
